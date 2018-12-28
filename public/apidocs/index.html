@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cogs REST API Documentation</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="api-doc-generator.min.css">
+</head>
+<body>
+  <main>
+    <nav class="navigation">
+      <section class="container">
+        <div class="row">
+          <div class="column">
+            <div class="title">Cogs REST API Documentation</div>
+          </div>
+        </div>
+      </section>
+    </nav>
+
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="sections">
+            <ul>
+              <li>
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-title">
+                <a name="" class="section-toggle"></a>
+              </div>
+
+              <div class="actions">
+                <a class="section-toggle">Show/hide</a>
+                <a class="hide-description">List Operations</a>
+                <a class="show-description">Expand Operations</a>
+              </div>
+            </div>
+
+            <div class="endpoints">
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/login</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9Y', auth_state: 'success' }</p>
+
+                </div>
+              </div>
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/users</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { id: 'johndoe@test.com', firstname: 'john', lastname: 'doe',<br />
+email: 'johndoe@test.com', picture: '/storage/fileuploads/photo.jpg', role: 'team', password: '' }</p>
+
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/users</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [{ id: 'johndoe@test.com', firstname: 'john', lastname: 'doe',<br />
+email: 'johndoe@test.com', picture: '/storage/fileuploads/photo.jpg', role: 'team', password: '' }]</p>
+
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/profile</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { id: 'admin@test.com', firstname: 'admin', lastname: 'last',<br />
+email: 'admin@test.com', picture: '/storage/fileuploads/photo.jpg', role: 'developer', password: '' }</p>
+
+                </div>
+              </div>
+              <div class="endpoint put">
+                <div class="address toggle-description">
+                  <span class="label">put</span><span class="url">/api/profile</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { id: 'admin@test.com', firstname: 'admin', lastname: 'last',<br />
+email: 'admin@test.com', picture: '/storage/fileuploads/photo.jpg', role: 'developer', password: '' }</p>
+
+                </div>
+              </div>
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/standups</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [{ id: 'johndoe@test.com', yesterday: 'Finished standup task', today: 'Starting auto task',<br />
+blockers: 'Vacation', updateDateTime: '2017-11-21T04:09:37.142Z', name: 'john doe' }]</p>
+
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/standups</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [{ id: 'johndoe@test.com', yesterday: 'Finished standup task', today: 'Starting auto task',<br />
+blockers: 'Vacation', updateDateTime: '2017-11-21T04:09:37.142Z', name: 'john doe' }]</p>
+
+                </div>
+              </div>
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/files</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { id: '22da45b0-ced7-11e7-8522-a15dfa168ea0', fileName: 'bike.jpg', description: 'New File',  category: 'Test',<br />
+userId: 'admin@test.com', url: '/storage/fileuploads/bike.jpg', favorite: 'false', uploadDateTime: 2017-11-21T16:15:05.611Z }</p>
+
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/files/download/:id/token/:token</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Download a file with the file id and the user web token (file is downloaded)</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>token</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/files/search/:type/searchtext/:searchtext</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [ { id: '3a42cf50-bff1-11e7-bcff-e5f21d9b4bc2', fileName: 'EnvironmentSetup.txt', description: 'How to setup your env',<br />
+category: 'team', userId: 'admin@test.com', url: '', favorite: 'false', uploadDateTime: '2017-11-02T17:14:04.357Z' } ]</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>type</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>searchtext</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/files/favorite</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [ { id: '3a42cf50-bff1-11e7-bcff-e5f21d9b4bc2', fileName: 'EnvironmentSetup.txt', description: 'How to setup your env',<br />
+category: 'team', userId: 'admin@test.com', url: '', favorite: 'true', uploadDateTime: '2017-11-02T17:14:04.357Z' } ]</p>
+
+                </div>
+              </div>
+              <div class="endpoint get">
+                <div class="address toggle-description">
+                  <span class="label">get</span><span class="url">/api/files/categories</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [ 'Team', 'Development', 'Documents', 'Release' ]</p>
+
+                </div>
+              </div>
+              <div class="endpoint delete">
+                <div class="address toggle-description">
+                  <span class="label">delete</span><span class="url">/api/files/categories/:name</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response [ 'Team', 'Development', 'Documents' ]</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>name</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="endpoint delete">
+                <div class="address toggle-description">
+                  <span class="label">delete</span><span class="url">/api/files/:id</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { success: true }</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="endpoint put">
+                <div class="address toggle-description">
+                  <span class="label">put</span><span class="url">/api/files/favorite/:id/value/:value</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Response { id: '3a42cf50-bff1-11e7-bcff-e5f21d9b4bc2', fileName: 'EnvironmentSetup.txt', description: 'How to setup dev env',<br />
+category: 'team', userId: 'admin@test.com', url: '', favorite: 'true', uploadDateTime: '2017-11-02T17:14:04.357Z' }</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>value</td>
+                      <td>boolean</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="api-doc-generator.min.js"></script>
+</body>
+</html>
